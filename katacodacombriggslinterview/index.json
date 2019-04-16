@@ -7,13 +7,13 @@
         "title": "Database",
         "text": "step1.md",
         "verify": "step1-verify.sh",
-        "courseData": "step1-install.sh"
+        "courseData": "step1-setup.sh"
       },
       {
         "title": "Webapp",
         "text": "step2.md",
         "verify": "step2-verify.sh",
-        "courseData": "step2-install.sh"
+        "courseData": "step2-setup.sh"
       }
     ],
     "intro": {
