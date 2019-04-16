@@ -34,5 +34,6 @@ EOF
 
 chown -R webapp:webapp /var/www/webapp
 chown root:root /var/www/webapp/dist/example-webapp-linux
+chmod 0750 /var/www/webapp/dist/example-webapp-linux
 
 echo "version=6" > /tmp/version
