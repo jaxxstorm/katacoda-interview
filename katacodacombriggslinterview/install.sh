@@ -3,6 +3,7 @@
 apt-get update
 apt install -y redis-server
 systemctl stop redis-server
+echo "I should not be here" >> /etc/redis/redis.conf
 
 echo "======"
 echo "Installing webapp"

@@ -5,13 +5,11 @@
     "steps": [
       {
         "title": "Database",
-        "text": "step1.md",
-        "courseData": "step1-setup.sh"
+        "text": "step1.md"
       },
       {
         "title": "Webapp",
-        "text": "step2.md",
-        "courseData": "step2-setup.sh"
+        "text": "step2.md"
       }
     ],
     "intro": {
