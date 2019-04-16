@@ -12,5 +12,23 @@ echo "======"
 curl https://s3-us-west-2.amazonaws.com/techops-interview-webapp/webapp.tar.gz -o /tmp/webapp.tar.gz
 mkdir -p /var/www/webapp
 tar zxvf /tmp/webapp.tar.gz -C /var/www/webapp
+useradd webapp -d /var/www/webapp
 
-echo "version=4" > /tmp/version
+cat << EOF > /lib/systemd/system/webapp.service
+[Unit]
+Description=webapp
+Wants=basic.target
+After=basic.target network.target redis-server.target
+
+[Service]
+ExecStart=/var/www/webapp/dist/example-webapp-linux
+WorkingDir=/var/www/webapp
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+chown -R webapp:webapp /var/www/webapp/dist
+
+echo "version=5" > /tmp/version
