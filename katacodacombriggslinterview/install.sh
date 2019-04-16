@@ -2,6 +2,7 @@
 
 apt-get update
 apt install -y redis-server
+systemctl stop redis-server
 
 echo "======"
 echo "Installing webapp"
