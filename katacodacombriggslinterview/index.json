@@ -4,7 +4,7 @@
   "details": {
     "steps": [
       {
-        "title": "Start the database",
+        "title": "Database",
         "text": "step1.md",
         "verify": "step1-verify.sh"
       }
