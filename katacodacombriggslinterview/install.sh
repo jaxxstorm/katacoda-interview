@@ -7,3 +7,4 @@ sudo apt-get -y install mysql-server
 apt-get install -y apache2 mysql-server
 systemctl start apache2
 systemctl start mysql
+echo "version=2" > /tmp/version
