@@ -1,10 +1,7 @@
 #!/bin/bash
 
 apt-get update
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
-sudo apt-get -y install mysql-server
-apt-get install -y apache2 mysql-server
-systemctl start apache2
-systemctl start mysql
-echo "version=2" > /tmp/version
+apt install -y redis
+echo "I SHOULD NOT BE HERE" >> /etc/redis/redis.conf
+curl https://s3-us-west-2.amazonaws.com/techops-interview-webapp/webapp.tar.gz -o /tmp/webapp.tar.gz
+echo "version=3" > /tmp/version
