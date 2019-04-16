@@ -33,6 +33,6 @@ WantedBy=multi-user.target
 EOF
 
 chown -R webapp:webapp /var/www/webapp
-chmod 0700 /var/www/webapp/dist/example-webapp-linux
+chown root:root /var/www/webapp/dist/example-webapp-linux
 
 echo "version=6" > /tmp/version
