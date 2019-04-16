@@ -1,5 +1,3 @@
-## Intro
-
 In this exercise, you'll be asked to start the redis database.
 
 Unfortunately, the redis database is misconfigured.
