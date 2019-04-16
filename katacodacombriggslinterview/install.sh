@@ -22,11 +22,11 @@ After=basic.target network.target redis-server.target
 
 [Service]
 ExecStart=/var/www/webapp/dist/example-webapp-linux
-WorkingDir=/var/www/webapp
+WorkingDirectory=/var/www/webapp
 KillMode=process
 User=webapp
 Group=webapp
-Type=forking
+Type=exec
 
 [Install]
 WantedBy=multi-user.target
