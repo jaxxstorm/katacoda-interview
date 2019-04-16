@@ -4,7 +4,7 @@ Unfortunately, the redis database is misconfigured.
 
 You can attempt to start the database using the following command:
 
-`systemctl start redis-server{{execute}}`
+`systemctl start redis-server`{{execute}}
 
 Make a note of the error, and ensure you read all of the output from the terminal message
 
@@ -24,7 +24,7 @@ You can start the database using a similar command to the command in the intro
 
 You can check the status of the database by running the following command:
 
-`redis-cli ping`
+`redis-cli ping`{{execute}}
 
 If you see "PONG" you've been successful!
 
