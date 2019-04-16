@@ -26,12 +26,12 @@ Once you have completed this, you should be able to use the redis-cli command to
 
 ## Part 2
 
-The second task involves the web application. An operator has carelessly run a command that has broken the permission for the web application to read its "static assets" such as images and CSS. As a result, the application is not running correctly!
+The second task involves the web application. An operator has carelessly run a command that has broken the permission for the web application. As a result, the application is not starting!
 
 In order to complete the task, you must:
 
-  1. Find the directory that the webapp assets and binary live in
-  2. Identify the correct directory with incorrect permissions
+  1. Find the directory that the webapp lives in
+  2. Identify the correct file with incorrect permissions
   3. Fix the directory so the permissions are correct
   4. Start the operating system service so that the web server is running
 

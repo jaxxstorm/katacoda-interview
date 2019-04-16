@@ -14,7 +14,7 @@ mkdir -p /var/www/webapp
 tar zxvf /tmp/webapp.tar.gz -C /var/www/webapp
 useradd webapp -d /var/www/webapp
 
-cat << EOF > /lib/systemd/system/webapp.service
+cat << EOF > /etc/systemd/system/webapp.service
 [Unit]
 Description=webapp
 Wants=basic.target
@@ -24,11 +24,15 @@ After=basic.target network.target redis-server.target
 ExecStart=/var/www/webapp/dist/example-webapp-linux
 WorkingDir=/var/www/webapp
 KillMode=process
+User=webapp
+Group=webapp
+Type=forking
 
 [Install]
 WantedBy=multi-user.target
 EOF
 
-chown -R webapp:webapp /var/www/webapp/dist
+chown -R webapp:webapp /var/www/webapp
+chmod 0700 /var/www/webapp/dist/example-webapp-linux
 
-echo "version=5" > /tmp/version
+echo "version=6" > /tmp/version
